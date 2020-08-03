@@ -14,8 +14,8 @@ local cr = ucoroutine.create(function()
   coroutine.yield()
   print("goodbye")
 end)
-ucoroutine.resume(cr)
-ucoroutine.resume(cr)
+ucoroutine.resume(cr) -- hello
+ucoroutine.resume(cr) -- goodbye
 ```
 
 ## Error Messages
@@ -29,10 +29,6 @@ stack traceback:
   main.lua:18: in coroutine <main.lua:14>
   main.lua:20: in coroutine <main.lua:13>
   main.lua:22: in function 'load'
-  [string "boot.lua"]:586: in function <[string "boot.lua"]:585>
-  [C]: in function 'xpcall'
-  [string "boot.lua"]:793: in function <[string "boot.lua"]:780>
-  [C]: in function 'xpcall'
 ```
 
 ## Documentation
